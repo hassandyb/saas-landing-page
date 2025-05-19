@@ -11,20 +11,16 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-    return <section>
+    return <section className="py-4">
         <div className="container">
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 border border-white/15 rounded-full px-4 py-2  items-center">
                 <div>
-                    <Image src={logoImage} alt="layers logo"/>
-                    
+                    <Image src={logoImage} alt="layers logo" className="h-6 w-auto "/>
                 </div>
-                <div>
-                {/* <FiMenu className=" "/> */}
-                <FiMenu className="feather feather-menu text-2xl text-white cursor-pointer" />
-
-
-
-
+                <div className="flex justify-end">
+                <FiMenu className="feather feather-menu text-2xl text-white cursor-pointer md:hidden" />
+                <button>Log In</button>
+                <button>Sign Up</button>
                 </div>
             </div>
         </div>
