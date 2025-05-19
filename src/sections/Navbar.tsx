@@ -1,7 +1,7 @@
 import { section } from "framer-motion/client";
 import Image  from "next/image"
 import logoImage from "@/assets/images/logo.svg"
-
+import { FiMenu } from "react-icons/fi";
 
 const navLinks = [
     { label: "Home", href: "#" },
@@ -19,6 +19,11 @@ export default function Navbar() {
                     
                 </div>
                 <div>
+                {/* <FiMenu className=" "/> */}
+                <FiMenu className="feather feather-menu text-2xl text-white cursor-pointer" />
+
+
+
 
                 </div>
             </div>
