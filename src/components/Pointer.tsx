@@ -1,7 +1,13 @@
 import { div } from "framer-motion/client";
 
+import { twMerge } from "tailwind-merge";
 
-export default function Pointer () {
+export default function Pointer (props : {
+    name : string;
+    color?: "red" | "blue";
+
+}) {
+    const {name, color} = props;
     return (
         <div className="relative">
             <svg xmlns="http://www.w3.org/2000/svg" 
@@ -18,7 +24,7 @@ export default function Pointer () {
                     <path d="M13 13l6 6"></path>
             </svg>
             <div className="absolute top-full left-0 mt-2 ml-2">
-                <div className="inline-flex rounded-full font-bold  text-sm bg-blue-500 px-2 rounded-tl-none">Andrea</div>
+                <div className={twMerge("inline-flex rounded-full font-bold  text-sm bg-blue-500 px-2 rounded-tl-none", color === "red" && "bg-red-500")}>{name}</div>
             </div>
 
         </div>
