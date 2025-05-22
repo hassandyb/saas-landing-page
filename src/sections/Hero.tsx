@@ -5,14 +5,21 @@ import designExample1Emage from "@/assets/images/design-example-1.png"
 import designExample2Emage from "@/assets/images/design-example-2.png"
 import Image from "next/image";
 
+import Pointer from "@/components/Pointer"
 export default function Hero() {
     return (
-        <section className="py-24">
+        <section className="py-24 overflow-x-clip">
             <div className="container relative">
-                <div>
+                <div className="absolute -left-40 top-16">
                     <Image src={designExample1Emage} alt="design example 1 image"/>
                 </div>
+                <div className="absolute -right-72 -top-16">
+                    <Image src={designExample2Emage} alt="design example 2 image"/>
+                </div>
+                <div >
+                    <Pointer />
 
+                </div>
                 <div className="flex justify-center">
                 <div className="inline-flex  py-1 px-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full text-neutral-950 font-semibold ">✨ $7.5M Said Round Raided</div>
                 </div>
